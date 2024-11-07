@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Click Párrafo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        p {
+            font-size: 18px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="primer-parrafo">Este es el primer párrafo.</p>
+    <p id="segundo-parrafo">Este es el segundo párrafo.</p>
+
+    <script>
+        $(document).ready(function() {
+            $('#primer-parrafo').click(function() {
+                alert("Has hecho clic en el primer párrafo.");
+            });
+        });
+    </script>
+</body>
+</html>

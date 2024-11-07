@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociar y desasociar clases</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .estilo-thead {
+            background-color: lightgray;
+        }
+        .estilo-tbody {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dato 1</td>
+                <td>Dato 2</td>
+            </tr>
+            <tr>
+                <td>Dato 3</td>
+                <td>Dato 4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="asociar">Asociar clases</button>
+    <button id="desasociar">Desasociar clases</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#asociar').click(function() {
+                $('thead').addClass('estilo-thead');
+                $('tbody').addClass('estilo-tbody');
+            });
+            $('#desasociar').click(function() {
+                $('thead').removeClass('estilo-thead');
+                $('tbody').removeClass('estilo-tbody');
+            });
+        });
+    </script>
+</body>
+</html>

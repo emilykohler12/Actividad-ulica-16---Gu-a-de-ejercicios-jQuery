@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar tamaño de fuente</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .noticia {
+            margin-bottom: 20px;
+        }
+        .descripcion {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="noticia">
+        <h2>Título de Noticia 1</h2>
+        <p class="descripcion">Descripción de la noticia 1...</p>
+    </div>
+
+    <div class="noticia">
+        <h2>Título de Noticia 2</h2>
+        <p class="descripcion">Descripción de la noticia 2...</p>
+    </div>
+
+    <div class="noticia">
+        <h2>Título de Noticia 3</h2>
+        <p class="descripcion">Descripción de la noticia 3...</p>
+    </div>
+
+    <button id="boton1">Aumentar tamaño</button>
+    <button id="boton2">Disminuir tamaño</button>
+    <button id="boton3">Tamaño normal</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#boton1').click(function() {
+                $('.descripcion').css('font-size', '20px');
+            });
+            $('#boton2').click(function() {
+                $('.descripcion').css('font-size', '12px');
+            });
+            $('#boton3').click(function() {
+                $('.descripcion').css('font-size', '14px');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resaltar Subdominios con AR</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .resaltado {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="listaLinks">
+        <li><a href="https://www.google.com">Google</a></li>
+        <li><a href="https://www.abc.ar">ABC Argentina</a></li>
+        <li><a href="https://www.reddit.com">Reddit</a></li>
+        <li><a href="https://www.mercadolibre.ar">Mercado Libre</a></li>
+        <li><a href="https://www.yahoo.com">Yahoo</a></li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            // Iteramos sobre cada enlace
+            $('#listaLinks a').each(function() {
+                var link = $(this).attr('href'); // Obtenemos el valor del href
+                if (link.indexOf('.ar') !== -1) { // Si contiene ".ar"
+                    $(this).addClass('resaltado'); // Resaltamos el enlace
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

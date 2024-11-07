@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento blur</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <form>
+        <input type="text" id="campoText" placeholder="Escribe algo...">
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $('#campoText').blur(function() {
+                let cadena = $(this).val(); // Recuperamos el valor del input
+                if (cadena.length === 0) {
+                    alert("No ingresó datos");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

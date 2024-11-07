@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento focus</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        input {
+            font-size: 16px;
+            padding: 5px;
+            margin: 10px;
+            color: blue;  /* Color azul por defecto */
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" value="Campo 1">
+    <input type="text" value="Campo 2">
+
+    <script>
+        $(document).ready(function() {
+            $('input').focus(function() {
+                $(this).css('color', 'red');  // Al tomar foco cambia a rojo
+            }).blur(function() {
+                $(this).css('color', 'blue');  // Cuando pierde foco regresa a azul
+            });
+        });
+    </script>
+</body>
+</html>

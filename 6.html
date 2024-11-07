@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar contenido de tabla</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Texto 1</td>
+            <td>Texto 2</td>
+            <td>Texto 3</td>
+        </tr>
+        <tr>
+            <td>Texto 4</td>
+            <td>Texto 5</td>
+            <td>Texto 6</td>
+        </tr>
+        <tr>
+            <td>Texto 7</td>
+            <td>Texto 8</td>
+            <td>Texto 9</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>Texto A</td>
+            <td>Texto B</td>
+            <td>Texto C</td>
+        </tr>
+        <tr>
+            <td>Texto D</td>
+            <td>Texto E</td>
+            <td>Texto F</td>
+        </tr>
+        <tr>
+            <td>Texto G</td>
+            <td>Texto H</td>
+            <td>Texto I</td>
+        </tr>
+    </table>
+
+    <button id="cambiar">Cambiar texto en la primera tabla</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#cambiar').click(function() {
+                $('table:first td').text('-');
+            });
+        });
+    </script>
+</body>
+</html>

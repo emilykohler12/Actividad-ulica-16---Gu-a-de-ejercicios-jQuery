@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordenada del Mouse</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #miDiv {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="miDiv"></div>
+    <p id="coordenadas"></p>
+    <p id="mensaje"></p>
+
+    <script>
+        $(document).ready(function() {
+            $('#miDiv').mousemove(function(event) {
+                var divOffset = $(this).offset();
+                var mouseX = event.pageX - divOffset.left;
+                var mouseY = event.pageY - divOffset.top;
+                $('#coordenadas').text('Coordenada X: ' + mouseX + ' Y: ' + mouseY);
+            }).mouseleave(function() {
+                $('#mensaje').text('El mouse no está dentro del div.');
+            });
+
+            $('#miDiv').mouseenter(function() {
+                $('#mensaje').text('');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar color de fila</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Fila 1</td>
+        </tr>
+        <tr>
+            <td>Fila 2</td>
+        </tr>
+    </table>
+
+    <script>
+        $(document).ready(function() {
+            $('table tr').click(function() {
+                $(this).css('background-color', '#d3d3d3');
+            });
+        });
+    </script>
+</body>
+</html>

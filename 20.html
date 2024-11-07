@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto fadeTo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #bloque1, #bloque2 {
+            margin: 20px;
+            padding: 10px;
+            background-color: lightblue;
+        }
+
+        #bloque2 {
+            display: none; /* Inicialmente oculto */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="bloque1">
+        <p>Este es el primer bloque de texto.</p>
+    </div>
+
+    <div id="bloque2">
+        <p>Este es el segundo bloque de texto que aparece después de ocultar el primero.</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#bloque1').click(function() {
+                $(this).fadeTo('slow', 0.2, function() {
+                    $('#bloque2').fadeIn('slow');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

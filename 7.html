@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Hipervínculo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a id="mi-hipervinculo" href="#">Haz clic aquí</a>
+
+    <button id="boton1">Enlace a Google</button>
+    <button id="boton2">Enlace a YouTube</button>
+    <button id="boton3">Enlace a Facebook</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#boton1').click(function() {
+                $('#mi-hipervinculo').attr('href', 'https://www.google.com').text('Ir a Google');
+            });
+            $('#boton2').click(function() {
+                $('#mi-hipervinculo').attr('href', 'https://www.youtube.com').text('Ir a YouTube');
+            });
+            $('#boton3').click(function() {
+                $('#mi-hipervinculo').attr('href', 'https://www.facebook.com').text('Ir a Facebook');
+            });
+        });
+    </script>
+</body>
+</html>
